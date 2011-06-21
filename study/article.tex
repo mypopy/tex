@@ -1,6 +1,11 @@
-\documentclass{article}
+\documentclass{book}
 \begin{document}
-This is my \emph{first} document prepared in \LaTeX. I typed it on \today.
+\title{Study \LaTeX}
+\author{JunZhao}
+\date{\today}
+\maketitle
+
+\noindent This is my \emph{first} document prepared in \LaTeX. I typed it on \today.
 
 We have seen that to typeset something in \LaTeX, we type in the
 text to be typeset together with some \LaTeX commands.
@@ -10,5 +15,147 @@ and lines maybe broken arbitrarily.
 The end of a paragraph is secified by a \emph{blank line}
 in the input. In other words, whenever you want to start a new
 paragraph, just leave a blank line and proceed.
+
+Carrots are good for you eyes, since they contain Vitamin A. Have you ever seen a rabibit
+wearing glassed?
+
+Carrots are good for you eyes, since they contain Vitamin A\@. Have you ever seen a rabibit
+wearing glassed?
+
+The number 1, 2, 3, eth.\ are called natural number. According to Kronecker, they were made
+by Cod; all else being the works of Man.
+
+Note the difference i right and left quotes in `signal quotes' and ``double quotes''.
+
+Note the difference i right and left quotes in \lq signal quotes\rq\ and \lq\lq double quotes\rq\rq.
+
+X-rays are discussed in pages 221--225 of Volume 3---the volume on electromagnetic waves.
+
+Maybe I have now learnt about 1\% of \LaTeX.
+
+\begin{center}
+The \TeX nical Institute\\[.75cm]
+Certificate
+\end{center}
+\noindent This is to certify that Mr. N. O. Vice has undergone a
+course at this institute and is qualified to be a \TeX nician.
+\begin{flushright}
+The Director\\
+The \TeX nical Institute
+\end{flushright}
+
+\textit{A polygon of three sides is called a \emph{triangle} and a
+polygon of four sides is called a \emph{quadrilateral}}
+
+\begin{center}
+{\bfseries\huge The \TeX nical Institute}\\[1cm]
+{\scshape\LARGE Certificate}
+\end{center}
+\noindent This is to certify that Mr. N. O. Vice has undergone a
+course at this institute and is qualified to be a \TeX nical Expert.
+\begin{flushright}
+{\sffamily The Director\\
+The \TeX nical Institute}
+\end{flushright}
+
+\chapter{Chapter}
+\section{Section}
+\subsection{Subsection}
+\subsubsection{Subsubsection}
+
+\subsection{Example}
+In this example, we show how subsections and subsubsections
+are produced (there are no subsubsubsections). Note how the
+subsections are numbered.
+\subsubsection{Subexample}
+Did you note that subsubsections are not numbered? This is so in the
+\texttt{book} and \texttt{report} classes. In the \texttt{article}
+class they too have numbers. (Can you figure out why?)
+\paragraph{Note}
+Paragraphs and subparagraphs do not have numbers. And they have
+\textit{run-in} headings.
+Though named ‘‘paragraph’’ we can have several paragraphs of text within this.
+\subparagraph{Subnote}
+Subparagraphs have an additional indentation too.
+And they can also contain more than one paragraph of text.
+
+\begin{enumerate}
+\item prepare a source file with the extension ``tex''
+\item Compile it with \LaTeX to produce a ``dvi'' file
+\item Print the document using a ``dvi'' driver
+\end{enumerate}
+
+Let’s take stock of what we’ve learnt
+\begin{tabbing}
+\hspace{1cm}\= \textbf{AbiWord}\quad\= A word processor\\[5pt]
+\> \textbf{Emacs} \> A text editor\\[5pt]
+\> \textbf{\TeX} \> A typesetting program
+\end{tabbing}
+
+The table below shows the sizes of the planets of our solar system.
+\begin{center}
+\begin{tabular}{lr}
+Planet & Diameter(km)\\[5pt]
+Mercury & 4878\\
+Venus & 12104\\
+Earth & 12756\\
+Mars & 6794\\
+Jupiter & 142984\\
+Saturn & 120536\\
+Uranus & 51118\\
+Neptune & 49532\\
+Pluto & 2274
+\end{tabular}
+\end{center}
+As can be seen, Pluto is the smallest and Jupiter the largest.
+
+In the seventeenth century, Fermat conjectured that if $n>2$, then
+there are no integers $x$, $y$, $z$ for which
+$$
+x^n+y^n=z^n.
+$$
+This was proved in 1994 by Andrew Wiles.
+
+The sequence
+$$
+2\sqrt{2}\,,\quad 2^2\sqrt{2-\sqrt{2}}\,,\quad 2^3
+\sqrt{2-\sqrt{2+\sqrt{2}}}\,,\quad 2^4\sqrt{2-
+\sqrt{2+\sqrt{2+\sqrt{2+\sqrt{2}}}}}\,,\;\ldots
+$$
+converge to $\pi$.
+
+In the classical \emph{syllogism}
+\begin{enumerate}
+\item All men are mortal.\label{pre1}
+\item Socrates is a man.\label{pre2}
+\item So Socrates is a mortal.\label{con}
+\end{enumerate}
+Statements (\ref{pre1}) and (\ref{pre2}) are the \emph{premises} and
+statement (\ref{con}) is the conclusion.
+
+\begin{minipage}{5cm}
+Footnotes in a minipage are numbered
+using lowercase letters.\footnote{%
+Inside minipage} \par This text
+references a footnote at the bottom
+of the page.\footnotemark
+\end{minipage}
+\footnotetext{At bottom of page}
+
+It is hard to write unstructured and disorganised documents using
+\LaTeX˜\cite{les85}.It is interesting to typeset one
+equation˜\cite[Sec 3.3]{les85} rather than setting ten pages of
+running matter˜\cite{don89,rondon89}.
+\begin{thebibliography}{9}
+\bibitem{les85}Leslie Lamport, 1985. \emph{\LaTeX---A Document
+Preparation System---User’s Guide and Reference Manual},
+Addision-Wesley, Reading.
+\bibitem{don89}Donald E. Knuth, 1989. \emph{Typesetting Concrete
+Mathematics}, TUGBoat, 10(1):31-36.
+\bibitem{rondon89}Ronald L. Graham, Donald E. Knuth, and Ore
+Patashnik, 1989. \emph{Concrete Mathematics: A Foundation for
+Computer Science}, Addison-Wesley, Reading.
+\end{thebibliography}
+
 \end{document}
 
