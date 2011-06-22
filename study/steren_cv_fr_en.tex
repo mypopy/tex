@@ -1,0 +1,239 @@
+%% This source code is under the GNU GPL license version 3
+%% Basically : Do what you want as long as you attribute !
+%% Steren Giannini (steren.giannini@gmail.com) 2010
+
+\documentclass[a4paper,11pt]{article} % fonte 11 points, papier a4
+
+%#########
+% Commande pour français/anglais,
+% changer le #2 pour changer la langue
+% #1 = anglais
+% #2 = francais
+\newcommand{\trad}[2]{#2}
+%#########
+
+\trad{
+	\usepackage[english]{babel}    % anglais
+}{
+	\usepackage[francais]{babel}    % faire du français
+}
+\usepackage[utf8]{inputenc}   % accents dans le source
+\usepackage[T1]{fontenc}        % accents dans le DVI
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{layout}
+\usepackage{hyperref} % hyperlinks
+
+%#########
+% La page
+%#########
+\pagestyle{empty}               % On ne numrote pas les pages
+
+\setlength{\hoffset}{-1 in}
+\setlength{\voffset}{-1 in}
+\setlength{\oddsidemargin}{2 cm} 	% Marge gauche sur pages impaires
+\setlength{\evensidemargin}{2 cm} 	% Marge gauche sur pages paires
+\setlength{\textwidth}{17cm} 	% Largeur de la zone de texte
+\trad{
+	\setlength{\topmargin}{1cm}    %marge haut
+}{
+	\setlength{\topmargin}{0,5 cm}
+}
+\setlength{\headheight}{0pt} 	% Haut de page
+\setlength{\headsep}{0pt} 	% Entre le haut de page et le texte
+\setlength{\footskip}{0pt} 	% Bas de page + séparation
+\setlength{\textheight}{29cm} 	% Hauteur de la zone de texte
+
+%########
+% Links
+%########
+\hypersetup{
+    colorlinks,%
+    citecolor=black,%
+    filecolor=black,%
+    linkcolor=black,%
+    urlcolor=black
+}
+
+%#############################
+% Diverses nouvelles commandes
+%#############################
+
+% Pour laisser de l'espace entre les lignes du tableau
+\newcommand\espace{\vrule height 20pt width 0pt}
+
+% Pour les titres
+\newcommand{\titre}[1]{%
+	\begin{center}
+	%\medskp
+	\rule{\textwidth}{1pt}
+	\par
+	\vspace{0.1cm}
+        \textbf{\large #1}
+	\par\rule{\textwidth}{1pt}
+	\end{center}
+	%\medskp
+	}
+
+% new itemize environment with itemsep parameter
+\newenvironment{customitemize}[0]
+  { \begin{itemize}
+    % set spacing between items
+    \addtolength{\itemsep}{\trad{-0.2}{0}\baselineskip}
+    % set spacing between lines
+    \addtolength{\baselineskip}{\trad{-0.2}{0}\baselineskip} }
+  { \end{itemize} }
+
+
+%###################
+% Début du document
+%###################
+\begin{document}
+
+\begin{flushleft}
+
+\trad
+{
+\begin{tabular}{p{11cm}r}
+    %\Large{Steren Giannini} & 8 lotissement Le Moulin\\
+    % & 54\,360 Mont sur Meurthe \\
+    \Large{Steren Giannini} & 4 rue de la pastorale \\
+    & 92\,130 Issy-Les-Moulineaux France\\
+    & Tel.: +33 6 84 92 76 24\\
+    French engineer & E-mail: {steren.giannini@gmail.com}\\
+    Date of birth: December 16th 1986 & Web: \href{http://www.steren.fr}{www.steren.fr}\\
+\end{tabular} 
+}
+{
+\begin{tabular}{p{13cm}r}
+    \Large{Steren Giannini}  &  \multirow{2}{4cm}{\includegraphics[angle=0, width=3cm]{id_steren.jpg}}  \\ 
+    & \\
+    24 ans & \\
+    & \\
+    4 rue de la pastorale &  \\
+    92\,130 Issy-Les-Moulineaux - France & \\
+    %8 lotissement Le Moulin &  \\
+    %54\,360 Mont sur Meurthe - France & \\
+    Tél.: +33 6 84 92 76 24 & \\
+    E-mail: {steren.giannini@gmail.com} & \\
+    Web: \href{http://www.steren.fr}{www.steren.fr} & \\
+
+\end{tabular} 
+}
+\end{flushleft}
+
+%############
+% TITLE
+%############
+
+%\begin{center}
+%\begin{LARGE}
+%\textbf{ \textsc{ \trad{Software Engineer}{Recherche poste d'ingénieur} }}
+%\end{LARGE}
+%\end{center}
+
+%############
+\titre{\trad{Education and training}{Etudes}}
+%############
+
+
+\begin{tabular}{cp{0.8\textwidth}}
+
+
+\textbf{2006-2009}  & \trad{\textit{\'Ecole Centrale Lyon}, a French college of general engineering.}
+                        {\'Elève-ingénieur à l'\textit{\'Ecole Centrale de Lyon}.} \\
+                    & \trad{Third year option: Informatics and Communication (67.8\%)}
+                        {Option de troisième année : Informatique et Communication, spécialité Multimédia}\\
+                    & \trad{Third year profession: Research \& Development (75\%)}
+                        {Métier de troisième année : Recherche et développement}\\
+                        
+\espace
+\textbf{2004-2006}  & \trad{\textit{Classes préparatoires} of Mathematics and Physics} % at the \textit{lycée Henri Poincaré} of Nancy. 
+                        {Classes préparatoires au lycée Henri Poincaré à Nancy.} \\ % Mathématiques Supérieures et Mathématiques Spéciales
+
+\espace
+\textbf{2004}       & \trad{French \textit{Baccalauréat} (Science) A+ and special English grade (85\%)}
+                        {Baccalauréat (Série Scientifique) avec mention Très Bien et mention Européenne} \\ %Anglais
+
+\end{tabular}
+
+\titre{\trad{Experience}{Expérience professionnelle}}
+%###################
+
+\begin{tabular}{cp{0.8\textwidth}}
+\textbf{2010-2011}						& \trad{Co-founder of \href{http://www.beansight.com}{\textit{Beansight}}: Product design and engineering}{Co-fondateur de \href{http://www.beansight.com}{\textit{Beansight}} : Design produit et responsable technique}\\
+                                        & \trad{Start-up selected by \href{http://www.lecamping.org}{\textit{Le Camping}}, a 6-month accelerator program -- 1 year}{Start-up sélectionnée par \href{http://www.lecamping.org}{\textit{Le Camping}}, programme d'accélération -- 1 an} \\
+\espace
+\textbf{2009-2010}						& \trad{Engineer at \href{http://www.3ds.com/}{\textit{Dassault Systèmes}}: social web platform (\href{https://swym.3ds.com/}{\textit{SwYm}})}{Ingénieur chez \href{http://www.3ds.com/}{\textit{Dassault Systèmes}} : plateforme de web social (\href{https://swym.3ds.com/}{\textit{SwYm}})}\\
+                                        & \trad{Projects include: a Wiki engine, Search and front-end widgets -- 1 year}{Projets : moteur de Wiki, Search et widgets front-end -- 1 an} \\
+\espace
+\textbf{2009} 							& \trad{End-Of-Course Work at \href{http://www.3ds.com/}{\textit{Dassault Systèmes}} (France):}{Travail de Fin d'\'Etude en recherche technologique chez \href{http://www.3ds.com/}{\textit{Dassault Systèmes}} :}\\
+                                        & \trad{Interactive painting and sculpting on 3D models (83\%) -- 6 months}{Méthode interactive de peinture et d'ajout de détails sur modèles 3D -- 6 mois} \\
+\espace
+\textbf{2008-2009} 						& \trad{Software developer working remotely for \href{http://www.creativecommons.org}{\textit{Creative Commons}}}{Développeur pour \href{http://www.creativecommons.org}{\textit{Creative Commons}} (travail à distance)} \\
+\espace
+\textbf{\trad{summer 2008}{été 2008}} 	& \trad{Internship at \href{http://www.creativecommons.org}{\textit{Creative Commons}} (San Francisco, United States):}{Stagiaire chez \href{http://www.creativecommons.org}{\textit{Creative Commons}} (San Francisco, \'Etats Unis) :} \\
+                                        & \trad{Semantic web software development (\href{http://semantic-mediawiki.org/}{\textit{Semantic MediaWiki}}) -- 10 weeks}{Développement dans le web sémantique (\href{http://semantic-mediawiki.org/}{\textit{Semantic MediaWiki}})-- 10 semaines} \\
+\espace
+\textbf{2008}	                        & \trad{Developer of \href{http://www.inkscape.org}{\textit{Inkscape}}, an open source scalable vector graphics editor} {Participation au développement d'\href{http://www.inkscape.org}{\textit{Inkscape}}, logiciel libre de dessin vectoriel}\\
+%\espace
+%\textbf{\trad{july 2007}{juillet 2007}} & \trad{Internship in a team of workers at \textit{Solvay Carbonate France} -- 1 month.}{Stage d’exécution dans une équipe d'ouvriers à \textit{Solvay Carbonate France} -- 1 mois.} \\ %mise en place d’un outil de formation d'un procédé de fabrication.
+%\espace
+%\textbf{2006-2007} 					& \trad{employee of the \textit{Junior Entreprise} : designing and making dynamic websites.}{réalisateur à la Junior Entreprise de l’École Centrale de Lyon : Conception et réalisation de sites internet dynamiques.} \\
+\end{tabular}
+
+
+\titre{\trad{Competences}{Compétences}}
+%#########################
+
+\begin{customitemize}
+\item \textbf{\trad{Languages}{Langues}}
+	\begin{itemize} 
+	\trad{\item \textbf{French}, mother tongue}{}
+	\item \trad{\textbf{English}, fluent (TOEFL: 90\%)} %(C1 in the Common European Framework, TOEFL : 603/670)
+				{\textbf{Anglais}, autonome (TOEFL: 90\%)} %(niveau C1 du cadre européen de référence, TOEFL : 603/670)
+	\item \trad{\textbf{Spanish}, intermediate (6 years) and \textbf{Italian}, intermediate (2 years)} % 90\% 65\%
+				{\textbf{Espagnol}, niveau intermédiaire (6 ans) et \textbf{Italien}, niveau intermédiaire (2 ans)}
+%	\item \trad{\textbf{Spanish}, intermediate (6 years of study)}
+%				{\textbf{Espagnol}, niveau intermédiaire (6 années d'études)}
+%	\item \trad{\textbf{Italian}, intermediate (2 years of study)}
+%				{\textbf{Italien}, niveau intermédiaire (2 années d'études)}
+	\end{itemize}
+\item \textbf{\trad{Computer}{Informatique}}
+	\begin{itemize}
+	\item \trad{Web: HTML, CSS, SVG, Javascript, Java}											{Programmation web : HTML, CSS, SVG, Javascript, Java}
+	\item \trad{Desktop applications and real time 3D: C++}										{Applications de bureau, 3D temps réel : C++}
+	\item \trad{Mobile: \href{https://market.android.com/developer?pub=Steren+Giannini}{\textit{Android} (2 applications, 20 000 users)}}									  					{Programmation mobile : \href{https://market.android.com/developer?pub=Steren+Giannini}{\textit{Android} (2 applications, 20 000 utilisateurs)}}
+%	\item \trad{Linux server and desktop}                                                       {Utilisation quotidienne d'environnements Linux et administration de serveurs Linux}
+	\item \trad{Knowledge of many digital art applications}							            {Maîtrise de nombreux outils d'infographie professionnelle (image, vidéo, 3D)}
+%	\item \trad{Familiar with SVN and Git version control system}                               {Familier avec l'utilisation des systèmes de gestion de versions SVN et Git}
+%   \item \trad{use of real-time rendering and physics engines}                                 {Expérience dans l'utilisation de moteurs de rendu temps réel et moteurs physiques}
+%	\item \trad{Use of \textit{CATIA} and \textit{Matlab} for the design and regulation of an UAV}{Utilisation des logiciels \textit{CATIA} et \textit{Matlab} dans le cadre d'un projet d'étude}
+	\end{itemize}
+\end{customitemize}
+
+\titre{\trad{Interests}{Centres d'Intérêts}}
+%###################
+
+%\begin{itemize}
+
+%\item \textbf{Permis B :} Titulaire du permis B depuis plus de 2 ans.
+%\item
+    %\textbf{\trad{Spare-time activities}{Loisirs}} 
+	\begin{customitemize}
+	\item \trad{Member of an improvisational theater company (4 years)}           								{Membre d'une troupe d'improvisation théatrale}
+	\item \trad{Direction of short films (traditional or computer generated) and other graphical creations (see \href{http://www.steren.fr}{www.steren.fr})}   	{Réalisation de courts métrages et autres créations graphiques (voir \href{http://www.steren.fr}{www.steren.fr})} %(traditionnels ou en images de synthèse)
+%	\item \trad{Associational life : active member of the student association of the school}					{Vie associative : membre actif de l'association des élèves de l'école}
+	\item \trad{Regular practice of rock climbing (3 years) and scuba diving (8 years)}           				{Pratique régulière de l'escalade et de la plongée sous-marine}
+%	\item \trad{TODO Web 3d et image}	  																		{Suivi de l'actualité des domaines du web et de l'image de synthèse} 
+	\end{customitemize}
+
+%\item \textbf{\trad{AFPS:}{AFPS:}} \trad{certificate of first aids training.}{diplomé de l'Attestation de Formation aux Premiers Secours.}
+	
+%\end{itemize}
+
+%Pour voir les marges :
+%\newpage
+%\layout
+
+\end{document}
